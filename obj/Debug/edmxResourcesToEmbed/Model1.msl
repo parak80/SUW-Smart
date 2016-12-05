@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SmartModelStoreContainer" CdmEntityContainer="SmartEntities">
+    <EntitySetMapping Name="Alarm">
+      <EntityTypeMapping TypeName="SmartModel.Alarm">
+        <MappingFragment StoreEntitySet="Alarm">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PowerIsOn" ColumnName="PowerIsOn" />
+          <ScalarProperty Name="AlarmSignal" ColumnName="AlarmSignal" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
