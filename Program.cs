@@ -1,21 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using WebApi.Models;
 
 namespace SMART
 {
     class Program
     {
 
-        //static string str = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename=c:\users\parisa\documents\visual studio 2015\Projects\SMART\Smart.mdf; Integrated Security = True";
-        //static string str = ConfigurationManager.ConnectionStrings["SmartEntities"].ConnectionString;
-        //static SqlConnection con = new SqlConnection(str);
+        static string str = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename=c:\users\tens\documents\visual studio 2015\Projects\SMART\SmartData.mdf; Integrated Security = True";
+        static SqlConnection con = new SqlConnection(str);
         static string PowerIsOn;
         static string AlarmSignal;
         static DateTime Time;
@@ -35,7 +32,7 @@ namespace SMART
                 Console.WriteLine("Enter any key to stop");
                 Console.ReadKey();
                 cts.Cancel();
-                //t.Wait();
+                t.Wait();
             }
             catch (SqlException ex)
             {
@@ -46,28 +43,19 @@ namespace SMART
         }
         static void GenerateDataForPowerOn(CancellationToken token)
         {
-            //con.Open();
+            con.Open();
             bool run = true;
             while (run)
             {
                 try
                 {
-                    SmartEntities db = new SmartEntities();
                     Thread.Sleep(3000);
                     token.ThrowIfCancellationRequested();
                     int i = random.Next(1, 10);
                     PowerIsOn = (i == 5) ? "ON" : "OFF";
-                    //string query = "INSERT INTO Alarm(PowerIsOn) VALUES (' " + PowerIsOn + " ')";
-                    //SqlCommand insert = new SqlCommand(query, con);
-                    //insert.ExecuteNonQuery();
-
-                    var alarm = new Alarm
-                    {
-                        PowerIsOn = PowerIsOn
-                    };
-                    db.Alarm.Add(alarm);
-                    db.SaveChanges();
-
+                    string query = "INSERT INTO Alarm(PowerIsOn) VALUES (' " + PowerIsOn + " ')";
+                    SqlCommand insert = new SqlCommand(query, con);
+                    insert.ExecuteNonQuery();
                     Console.WriteLine("stored in database");
                 }
                 catch (AggregateException ae)
@@ -84,8 +72,8 @@ namespace SMART
                 }
 
             }
-            //con.Dispose();
+            con.Dispose();
+            
         }
     }
 }
-
