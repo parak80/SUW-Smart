@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="/Scripts/jquery-1.10.2.js"></script>
+    <script src="/Scripts/bootstrap.js"></script>
+    <script src="../Scripts/angular.js"></script>
+    <script src="../Scripts/angular-route.js"></script>
+    <script src="/Scripts/jquery.validate.js"></script>
+    <script src="../Scripts/MyScripts/alarm.js"></script>
+    <script src="../Services/alarm-api.services.js"></script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><button class="btn btninfo" onclick="GetAllAlarm();return false;">Get all Alarm</button></td>
+        </tr>
+        <tr><td><br /></td></tr>
+        <tr>
+            <td>Check Alarm by Id <input class="form-control" type="text" id="Id" style="width:50PX" /></td>
+            <td><button class="btn btninfo" onclick="GetAlarm(); return false;">Check your Alarm</button></td>
+
+            <!--<td><button class="btn btninfo" onclick="UpdateAlarm(); return false;">Change the status of Power</button></td>-->
+        </tr>
+        <tr><td></td></tr>
+        <tr>
+            <td>
+                <!--<table>
+                    <tr><td>Id:</td><td><input class="form-control" type="text" id="Id" /></td></tr>
+                    <tr><td>Power:</td><td><input class="form-control" type="text" id="PowerIsOn" /></td></tr>
+                    <tr><td>Alarm Signal:</td><td><input class="form-control" type="text" id="AlarmSignal" /></td></tr>
+                    <tr><td>Time:</td><td><input class="form-control" type="text" id="Time" /></td></tr>
+                    <tr><td></td></tr>
+
+                    <tr>
+                        <td>Delete Alarm <input class="form-control" type="text" id="txtId" style="width:50PX" /></td>
+                        <td><button class="btn btninfo" onclick="DeleteAlarm(); return false;">Delete Alarm</button></td>
+                    </tr>
+                </table>-->
+
+                <!--<button type="submit" onclick="AddAlarm()" class="btn btn-default">Add Alarm</button>-->
+
+    </table>
+    <div id="divResult"></div>
+</body>
+</html>

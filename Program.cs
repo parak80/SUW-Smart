@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -11,7 +12,8 @@ namespace SMART
     class Program
     {
 
-        static string str = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename=c:\users\tens\documents\visual studio 2015\Projects\SMART\SmartData.mdf; Integrated Security = True";
+        //static string str = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Smart;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        static string str = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Smart;Integrated Security=True; Connect Timeout = 30; Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         static SqlConnection con = new SqlConnection(str);
         static string PowerIsOn;
         static string AlarmSignal;
@@ -32,7 +34,7 @@ namespace SMART
                 Console.WriteLine("Enter any key to stop");
                 Console.ReadKey();
                 cts.Cancel();
-                t.Wait();
+                //t.Wait();
             }
             catch (SqlException ex)
             {
@@ -41,23 +43,64 @@ namespace SMART
             Console.ReadLine();
 
         }
+
+        static public void Post(string value)
+        {
+            Time = DateTime.Now;
+            using (SqlConnection connection = new SqlConnection(str))
+            {
+                using (SqlCommand command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandType = CommandType.Text;
+                    //command.CommandText = @"UPDATE Alarm SET PowerIsOn = @PowerIsOn WHERE Id = @AlarmId";
+                    command.CommandText = "INSERT INTO Alarm(PowerIsOn, AlarmSignal, Time) VALUES (' " + PowerIsOn + " ' ,' " + AlarmSignal + " ', ' " + Time + " ')";
+                    command.Parameters.AddWithValue("@PowerIsOn", value);
+                    command.Parameters.AddWithValue("@AlarmId", value);
+                    command.Parameters.AddWithValue("@Time", value);
+                    try
+                    {
+                        connection.Open();
+                        int recordsAffected = command.ExecuteNonQuery();
+                        if (recordsAffected <= 0)
+                        {
+                            Console.WriteLine("No records effected");
+                        }
+                    }
+                    catch (SqlException ex)
+                    {
+                        Console.WriteLine("Exception:" + ex.Message);
+                    }
+                    finally
+                    {
+                        connection.Close();
+                    }
+                }
+            }
+        }
         static void GenerateDataForPowerOn(CancellationToken token)
         {
-            con.Open();
             bool run = true;
             while (run)
             {
                 try
                 {
-                    Thread.Sleep(3000);
+                    Thread.Sleep(5000);
                     token.ThrowIfCancellationRequested();
                     int i = random.Next(1, 10);
                     PowerIsOn = (i == 5) ? "ON" : "OFF";
-                    string query = "INSERT INTO Alarm(PowerIsOn) VALUES (' " + PowerIsOn + " ')";
-                    SqlCommand insert = new SqlCommand(query, con);
-                    insert.ExecuteNonQuery();
+                    Console.WriteLine("PowerIsOn:" + PowerIsOn);
+                    Post(PowerIsOn);
+
+                    AlarmSignal = (i == 5) ? "OK" : "DANGER";
+                    Console.WriteLine("AlarmSignal:" + AlarmSignal);
+                    Post(AlarmSignal);
+
+                    //Time = DateTime.Now;
+                    //Console.WriteLine("TIME:" + Time);
                     Console.WriteLine("stored in database");
                 }
+
                 catch (AggregateException ae)
                 {
                     foreach (Exception e in ae.InnerExceptions)
@@ -72,8 +115,6 @@ namespace SMART
                 }
 
             }
-            con.Dispose();
-            
         }
     }
 }

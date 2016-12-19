@@ -1,19 +1,4 @@
-c:\users\tens\documents\visual studio 2015\Projects\SMART\bin\Debug\SMART.exe.config
-c:\users\tens\documents\visual studio 2015\Projects\SMART\obj\Debug\SMART.csprojResolveAssemblyReference.cache
-c:\users\tens\documents\visual studio 2015\Projects\SMART\bin\Debug\SmartData.mdf
-c:\users\tens\documents\visual studio 2015\Projects\SMART\bin\Debug\SmartData_log.ldf
-c:\users\tens\documents\visual studio 2015\Projects\SMART\bin\Debug\SMART.exe
-c:\users\tens\documents\visual studio 2015\Projects\SMART\bin\Debug\SMART.pdb
-c:\users\tens\documents\visual studio 2015\Projects\SMART\obj\Debug\SMART.exe
-c:\users\tens\documents\visual studio 2015\Projects\SMART\obj\Debug\SMART.pdb
-C:\Users\Parisa\Desktop\SMART\SMART\bin\Debug\SMART.exe.config
-C:\Users\Parisa\Desktop\SMART\SMART\obj\Debug\SMART.exe
-C:\Users\Parisa\Desktop\SMART\SMART\obj\Debug\SMART.pdb
-C:\Users\Parisa\Desktop\SMART\SMART\bin\Debug\Smart.mdf
-C:\Users\Parisa\Desktop\SMART\SMART\bin\Debug\Smart_log.ldf
-C:\Users\Parisa\Desktop\SMART\SMART\bin\Debug\SMART.exe
-C:\Users\Parisa\Desktop\SMART\SMART\bin\Debug\SMART.pdb
-C:\Users\Parisa\Desktop\SMART\SMART\obj\Debug\SMART.csprojResolveAssemblyReference.cache
+C:\Users\Parisa\Documents\Visual Studio 2015\Projects\SMART\bin\Debug\SMART.exe.config
 C:\Users\Parisa\Documents\Visual Studio 2015\Projects\SMART\bin\Debug\ApplicationInsights.config
 C:\Users\Parisa\Documents\Visual Studio 2015\Projects\SMART\bin\Debug\roslyn\csc.exe
 C:\Users\Parisa\Documents\Visual Studio 2015\Projects\SMART\bin\Debug\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
@@ -27,9 +12,6 @@ C:\Users\Parisa\Documents\Visual Studio 2015\Projects\SMART\bin\Debug\roslyn\Sys
 C:\Users\Parisa\Documents\Visual Studio 2015\Projects\SMART\bin\Debug\roslyn\vbc.exe
 C:\Users\Parisa\Documents\Visual Studio 2015\Projects\SMART\bin\Debug\roslyn\VBCSCompiler.exe
 C:\Users\Parisa\Documents\Visual Studio 2015\Projects\SMART\bin\Debug\roslyn\VBCSCompiler.exe.config
-C:\Users\Parisa\Documents\Visual Studio 2015\Projects\SMART\bin\Debug\Smart.mdf
-C:\Users\Parisa\Documents\Visual Studio 2015\Projects\SMART\bin\Debug\Smart_log.ldf
-C:\Users\Parisa\Documents\Visual Studio 2015\Projects\SMART\bin\Debug\SMART.exe.config
 C:\Users\Parisa\Documents\Visual Studio 2015\Projects\SMART\bin\Debug\SMART.exe
 C:\Users\Parisa\Documents\Visual Studio 2015\Projects\SMART\bin\Debug\SMART.pdb
 C:\Users\Parisa\Documents\Visual Studio 2015\Projects\SMART\bin\Debug\Antlr3.Runtime.dll
@@ -53,8 +35,8 @@ C:\Users\Parisa\Documents\Visual Studio 2015\Projects\SMART\bin\Debug\WebApi.dll
 C:\Users\Parisa\Documents\Visual Studio 2015\Projects\SMART\bin\Debug\System.Web.Optimization.dll
 C:\Users\Parisa\Documents\Visual Studio 2015\Projects\SMART\bin\Debug\System.Web.Mvc.dll
 C:\Users\Parisa\Documents\Visual Studio 2015\Projects\SMART\bin\Debug\System.Web.Http.dll
-C:\Users\Parisa\Documents\Visual Studio 2015\Projects\SMART\bin\Debug\System.Web.Http.Owin.dll
 C:\Users\Parisa\Documents\Visual Studio 2015\Projects\SMART\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Parisa\Documents\Visual Studio 2015\Projects\SMART\bin\Debug\System.Web.Http.Owin.dll
 C:\Users\Parisa\Documents\Visual Studio 2015\Projects\SMART\bin\Debug\System.Web.Http.WebHost.dll
 C:\Users\Parisa\Documents\Visual Studio 2015\Projects\SMART\bin\Debug\Microsoft.Web.Infrastructure.dll
 C:\Users\Parisa\Documents\Visual Studio 2015\Projects\SMART\bin\Debug\System.Web.Razor.dll
@@ -81,14 +63,14 @@ C:\Users\Parisa\Documents\Visual Studio 2015\Projects\SMART\bin\Debug\Newtonsoft
 C:\Users\Parisa\Documents\Visual Studio 2015\Projects\SMART\bin\Debug\System.Web.Optimization.xml
 C:\Users\Parisa\Documents\Visual Studio 2015\Projects\SMART\bin\Debug\System.Web.Mvc.xml
 C:\Users\Parisa\Documents\Visual Studio 2015\Projects\SMART\bin\Debug\System.Web.Http.xml
-C:\Users\Parisa\Documents\Visual Studio 2015\Projects\SMART\bin\Debug\System.Web.Http.Owin.xml
 C:\Users\Parisa\Documents\Visual Studio 2015\Projects\SMART\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\Parisa\Documents\Visual Studio 2015\Projects\SMART\bin\Debug\System.Web.Http.Owin.xml
 C:\Users\Parisa\Documents\Visual Studio 2015\Projects\SMART\bin\Debug\System.Web.Http.WebHost.xml
 C:\Users\Parisa\Documents\Visual Studio 2015\Projects\SMART\bin\Debug\System.Web.Razor.xml
 C:\Users\Parisa\Documents\Visual Studio 2015\Projects\SMART\bin\Debug\System.Web.WebPages.Razor.xml
 C:\Users\Parisa\Documents\Visual Studio 2015\Projects\SMART\bin\Debug\System.Web.WebPages.xml
 C:\Users\Parisa\Documents\Visual Studio 2015\Projects\SMART\bin\Debug\System.Web.WebPages.Deployment.xml
 C:\Users\Parisa\Documents\Visual Studio 2015\Projects\SMART\obj\Debug\SMART.csprojResolveAssemblyReference.cache
-C:\Users\Parisa\Documents\Visual Studio 2015\Projects\SMART\obj\Debug\SMART.csproj.SMART.exe.config
 C:\Users\Parisa\Documents\Visual Studio 2015\Projects\SMART\obj\Debug\SMART.exe
 C:\Users\Parisa\Documents\Visual Studio 2015\Projects\SMART\obj\Debug\SMART.pdb
+C:\Users\Parisa\Documents\Visual Studio 2015\Projects\SMART\bin\Debug\WebGrease.dll
